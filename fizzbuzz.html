@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Untitled Wep Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untitled Wep Page</title>
+    <style>
+      p {
+        overflow-y: scroll;
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <p id="output"></p>
+
+    <script>
+
+      let s = "";
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 !== 0) {
+          s += "Fizz" + "</br>";
+        } else if (i % 5 === 0 && i % 3 !== 0) {
+          s += "Buzz" + "</br>";
+        } else if (i % 5 === 0 && i % 3 === 0) {
+          s += "Fizz Buzz" + "</br>";
+        } else {
+          s += i + "</br>";
+        }
+      }
+
+      document.getElementById("output").innerHTML = s;
+
+    </script>
+
+  </body>
+</html>
